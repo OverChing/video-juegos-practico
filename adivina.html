@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de Adivinanza</title>
+</head>
+<body>
+  <h1>Bienvenido al Juego de Adivinanza</h1>
+  <p>Puedes adivinar el número secreto entre 1 y 100?</p>
+  <input type="number" id="guessInput">
+  <button onclick="checkGuess()">Adivinar</button>
+  <p id="message"></p>
+
+  <script>
+    // Generar un número aleatorio entre 1 y 100
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let tries = 0;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById('guessInput').value);
+      tries++;
+
+      if (guess === secretNumber) {
+        document.getElementById('message').innerHTML = `¡Felicitaciones! Adivinaste el número ${secretNumber} en ${tries} intentos.`;
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('guessInput').disabled = true;
+      } else if (guess < secretNumber) {
+        document.getElementById('message').innerHTML = 'Intenta con un número más alto.';
+        document.getElementById('message').style.color = 'red';
+      } else {
+        document.getElementById('message').innerHTML = 'Intenta con un número más bajo.';
+        document.getElementById('message').style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
+
+Este es un juego de adivinanza simple en el que el usuario debe adivinar un número secreto generado aleatoriamente. Puedes expandir este juego o tomarlo como inspiración para crear otros juegos más complejos.
+
+Si estás interesado en crear un juego más elaborado, te recomiendo aprender JavaScript y utilizar una biblioteca de desarrollo de juegos como Phaser o Three.js para proyectos 2D o 3D, respectivamente. Estas bibliotecas te proporcionarán herramientas y funciones más avanzadas para crear juegos interactivos y complejos en la web.

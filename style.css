@@ -1,17 +1,54 @@
 body{
-    background-color: crimson;
-    }
+    background-image: url(img/fondo.jpg);
+    /* Puedes ajustar la propiedad background-size según tus necesidades */
+    background-size: cover; /* Cubrir todo el fondo */    }
 img{
     width: 300px;
     height: 300px;
 }
-#lego{
+#hollow{
     width: 200px;
     height: 200px;
 }
-
 .text{
     font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
+p{
+    color: azure;
+}
+title{
+    color: azure;
+}
+h1{
+    color: azure;
+}
+li{
+    color: azure;
+}
+.boton{
+    background-color: dimgray;
+    padding: 2%;
+    margin: 2px;
+    font-size: large;
+    border: 3px solid #000;
+    border-radius: 200px; /* Establece un radio de curvatura de 25px para todas las esquinas */
+    border: none;
+    cursor: pointer;
+}
+      
+.color-button:hover {
+    background-color: #e74c3c; /* Color cuando el mouse pasa por encima del botón */
+}
+      
+
+#barra{
+    display: flex;
+}
+/* Establece una sombra en un elemento div con clase "shadow-box" */
+.shadow-box {
+    background-color: #3498db;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+    /* box-shadow: horizontal-offset vertical-offset blur spread color; */
+  }
